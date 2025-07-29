@@ -1,4 +1,4 @@
 container:
-  - name: petticur/libra-node
+    name: petticur/libra-node
     ref: petticur/libra-framework@refactor-container
     build: ./build.sh
