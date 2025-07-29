@@ -1,0 +1,8 @@
+name: libra
+description: "Libra node stack"
+containers:
+  - name: petticur/libra-node
+    ref: petticur/libra-framework
+    path: ./container
+pods:
+  - name: libra-node

@@ -1,0 +1,3 @@
+services:
+  libra-node:
+    image: petticur/libra-node:stack
