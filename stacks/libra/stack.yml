@@ -2,7 +2,7 @@ name: libra
 description: "Libra node stack"
 containers:
   - name: petticur/libra-node
-    ref: petticur/libra-framework
-    path: ./container
+    ref: .
+    path: ./libra-node
 pods:
   - name: libra-node
