@@ -1,3 +1,12 @@
 services:
   libra-node:
     image: petticur/libra-node:stack
+    # user: ${STACK_HOST_UID:-1000}:${STACK_HOST_GID:-1000}
+    volumes:
+      - libra-storage:/root/.libra
+    ports:
+      - 6182
+      - 8080 @stack http-proxy
+
+volumes:
+  libra-storage:
