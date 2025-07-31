@@ -6,3 +6,4 @@ containers:
     path: ./libra-node
 pods:
   - name: libra-node
+    path: ./libra-node
