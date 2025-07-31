@@ -6,7 +6,7 @@ services:
       - libra-storage:/root/.libra
     ports:
       - 6182
-      - 8080 @stack http-proxy
+      - 8080 # @stack http-proxy
 
 volumes:
   libra-storage:
