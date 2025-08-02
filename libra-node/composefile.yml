@@ -1,12 +1,10 @@
 services:
   libra-node:
     image: petticur/libra-node:stack
-    # Note at present uid/gid only works for 1000
-    # since the user ubuntu has that uid and already
-    # has a home directory at /home/ubuntu
-    # So bind mounting will randomly fail if the host
-    # user has a uid that is not 1000 (very likely to be the case).
-    user: ${STACK_HOST_UID:-1000}:${STACK_HOST_GID:-1000}
+    # Pass the host uid:gid to allow the container to set file ownership correctly
+    environment:
+      USER_UID: ${STACK_HOST_UID}
+      USER_GID: ${STACK_HOST_GID}
     volumes:
       - libra-storage:/home/ubuntu/.libra
     ports:
