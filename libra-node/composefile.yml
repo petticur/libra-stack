@@ -6,7 +6,7 @@ services:
       USER_UID: ${STACK_HOST_UID}
       USER_GID: ${STACK_HOST_GID}
     volumes:
-      - libra-storage:/home/ubuntu/.libra
+      - libra-storage:/mnt/libra/.libra
     ports:
       - 6182
       - 8080 # @stack http-proxy
