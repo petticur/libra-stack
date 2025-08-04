@@ -1,4 +1,4 @@
 container:
     name: 0lnetworkcommunity/libra-node
-    ref: 0lnetworkcommunity/libra-framework@main
+    ref: 0lnetworkcommunity/libra-framework@release-8.0
     build: ./build.sh

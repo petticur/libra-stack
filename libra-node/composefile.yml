@@ -1,6 +1,6 @@
 services:
   libra-node:
-    image: petticur/libra-node:stack
+    image: 0lnetworkcommunity/libra-node:stack
     # Pass the host uid:gid to allow the container to set file ownership correctly
     environment:
       USER_UID: ${STACK_HOST_UID}
